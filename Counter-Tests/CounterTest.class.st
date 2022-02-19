@@ -1,0 +1,36 @@
+Class {
+	#name : #CounterTest,
+	#superclass : #TestCase,
+	#category : #'Counter-Tests'
+}
+
+{ #category : #tests }
+CounterTest >> testCounterDecrement [
+	| c |
+	c := Counter new.
+	c count: 5.
+	c decrement.
+	c decrement.
+	self assert: c count equals: 3
+	
+]
+
+{ #category : #tests }
+CounterTest >> testCounterIncrement [ 
+	| c |
+	c := Counter new.
+	c count: 5.
+	c increment.
+	c increment.
+	self assert: c count equals: 7
+	
+]
+
+{ #category : #tests }
+CounterTest >> testCounterIsSetAndRead [
+	| c |
+	c := Counter new.
+	c count: 5.
+	self assert: c count equals: 5
+	
+]
