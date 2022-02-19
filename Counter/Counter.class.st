@@ -16,6 +16,11 @@ Class {
 	#category : #Counter
 }
 
+{ #category : #'class initialization' }
+Counter class >> startsWith: anInteger [ 
+	^ self new count: anInteger 
+]
+
 { #category : #accessing }
 Counter >> count [
 	^ count

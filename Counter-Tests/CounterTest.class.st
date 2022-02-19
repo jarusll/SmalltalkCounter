@@ -5,6 +5,14 @@ Class {
 }
 
 { #category : #tests }
+CounterTest >> testCounterClasssideInit [
+	| c |
+	c := Counter startsWith: 5.
+	self assert: c count equals: 5
+	
+]
+
+{ #category : #tests }
 CounterTest >> testCounterDecrement [
 	| c |
 	c := Counter new.
