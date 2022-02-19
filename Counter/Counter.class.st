@@ -36,7 +36,12 @@ Counter >> decrement [
 	count := self count - 1.
 ]
 
-{ #category : #accessing }
+{ #category : #API }
 Counter >> increment [
 	count := self count + 1.
+]
+
+{ #category : #accessing }
+Counter >> initialize [ 
+	count := 0
 ]
